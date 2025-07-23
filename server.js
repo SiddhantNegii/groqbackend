@@ -8,6 +8,9 @@ dotenv.config();
 const app = express();
 app.use(cors());
 app.use(express.json());
+app.get('/', (req, res) => {
+  res.send('Backend is working!');
+});
 
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
