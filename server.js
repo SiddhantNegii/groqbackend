@@ -19,7 +19,7 @@ app.post('/chat', async (req, res) => {
     const { messages } = req.body;
 
     const chatStream = await groq.chat.completions.create({
-      model: 'llama3-70b-8192',
+      model: 'llama-3.3-70b-versatile',
       messages,
       stream: true,
     });
